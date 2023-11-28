@@ -26,15 +26,12 @@ func main() {
 
 		firstRange := strings.Split(pair[0], "-")
 		secondRange := strings.Split(pair[1], "-")
-		println(firstRange[0], firstRange[1])
 
-		x, _ := strconv.Atoi(firstRange[0]) // 4
-		y, _ := strconv.Atoi(firstRange[1]) // 8
+		x, _ := strconv.Atoi(firstRange[0])
+		y, _ := strconv.Atoi(firstRange[1])
 
-		a, _ := strconv.Atoi(secondRange[0]) // 2
-		b, _ := strconv.Atoi(secondRange[1]) // 6
-
-		println(x, y)
+		a, _ := strconv.Atoi(secondRange[0])
+		b, _ := strconv.Atoi(secondRange[1])
 
 		if (a <= x && b >= y) || (x <= a && y >= b) {
 			overlap++
