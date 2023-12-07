@@ -214,7 +214,6 @@ func partTwo() {
 			mr, _ = strconv.Atoi(midLineRight)
 			m = ml * mr
 			gearRatio += m
-			fmt.Println("line", sym.line, "h", h, "lo", lo, "m", m)
 			continue
 		} else if midLineRight != "x" {
 			m, _ = strconv.Atoi(midLineRight)
@@ -227,13 +226,11 @@ func partTwo() {
 
 		if ajdH {
 			gearRatio += h
-			fmt.Println("line", sym.line, "h", h, "lo", lo, "m", m)
 			continue
 		}
 
 		if ajdLo {
 			gearRatio += lo
-			fmt.Println("line", sym.line, "h", h, "lo", lo, "m", m)
 			continue
 		}
 
@@ -254,26 +251,22 @@ func partTwo() {
 		}
 
 		if lo == 0 {
-			lo = 1 // low not found
+			lo = 1
 		}
 
 		if h == 0 {
-			h = 1 // high not found
+			h = 1
 		}
 
 		if m == 0 {
-			m = 1 // high and low not found and so no one middle can exist
+			m = 1
 		}
-
-		fmt.Println("the end", "line", sym.line, "h", h, "lo", lo, "m", m)
 		gearRatio += h * lo * m
-
 	}
-
 	fmt.Println(gearRatio)
-
 }
 
 func main() {
+	partOne()
 	partTwo()
 }
